@@ -22,7 +22,7 @@ Hệ thống phát hiện tư thế ngồi thông minh là một ứng dụng s�
 
 Dưới đây là video demo về cách hệ thống hoạt động:
 
-[![Xem video demo trên YouTube](https://img.youtube.com/vi/https://youtu.be/CxjrGVHny4M/demo.jpg)](https://youtu.be/CxjrGVHny4M)
+[![Xem video demo trên YouTube](demo.jpg)](https://youtu.be/CxjrGVHny4M)
 
 ## Cài đặt và chạy ứng dụng
 
