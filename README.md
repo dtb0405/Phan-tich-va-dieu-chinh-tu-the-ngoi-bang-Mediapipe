@@ -78,4 +78,9 @@ Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, vui lòng liên hệ 
 
 ## Lời cảm ơn
 
-Cảm ơn tất cả các thành viên trong nhóm đã đóng góp vào dự án này. Đặc biệt cảm ơn các thư viện mã nguồn mở đã giúp chúng tôi xây dựng hệ thống này một cách dễ dàng hơn.
+Cảm ơn tất cả các thành viên trong nhóm đã đóng góp vào dự án này. Đặc biệt chúng tôi xin gửi lời cảm ơn chân thành đến:
+
+- **Thầy Lê Trung Hiếu** - Người đã tận tình hướng dẫn, chia sẻ kiến thức và kinh nghiệm quý báu, giúp chúng tôi vượt qua những khó khăn trong quá trình thực hiện dự án.
+- **Thầy Nguyễn Văn Nhân** - Người đã truyền cảm hứng, động viên và hỗ trợ chúng tôi trong việc phát triển và hoàn thiện hệ thống.
+
+Nhờ sự giúp đỡ và định hướng của hai thầy, chúng tôi đã có thể hoàn thành dự án một cách suôn sẻ và hiệu quả. Chúng tôi luôn trân trọng những đóng góp và sự hỗ trợ quý báu từ các thầy.
