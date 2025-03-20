@@ -18,11 +18,11 @@ Hệ thống phát hiện tư thế ngồi thông minh là một ứng dụng s�
 - **gTTS**: Chuyển đổi văn bản thành giọng nói để cảnh báo người dùng.
 - **HTML/CSS/JavaScript**: Xây dựng giao diện người dùng và xử lý tương tác.
 
-## Video Demo
+## Video demo
 
 Dưới đây là video demo về cách hệ thống hoạt động:
 
-[![Xem video demo trên YouTube](https://i9.ytimg.com/vi_webp/CxjrGVHny4M/mq1.webp?sqp=CLDq774G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gXyhyMA8=&rs=AOn4CLAp_9qRNkdcrKXakzpDrxy7sTyAJg)](https://youtu.be/CxjrGVHny4M)
+[![Xem video demo trên YouTube](https://i9.ytimg.com/vi_webp/PpePOWZTrzA/mq2.webp?sqp=CIjv774G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDggZShlMA8=&rs=AOn4CLDcSgrikfD21yGEIPjOkRpwixEhhQ)](https://youtu.be/PpePOWZTrzA)
 
 ## Cài đặt và chạy ứng dụng
 
