@@ -1,54 +1,75 @@
+# Hệ thống phát hiện tư thế ngồi thông minh
 
-🧑‍💻 Hệ thống phát hiện tư thế ngồi thông minh
+Hệ thống phát hiện tư thế ngồi thông minh là một ứng dụng sử dụng công nghệ Computer Vision và Machine Learning để theo dõi và cảnh báo người dùng về tư thế ngồi không đúng. Hệ thống này giúp người dùng cải thiện tư thế ngồi, tránh các vấn đề sức khỏe liên quan đến việc ngồi sai tư thế trong thời gian dài.
 
-Đây là một hệ thống phát hiện tư thế ngồi sử dụng Flask, MediaPipe Pose và OpenCV để phân tích và đánh giá tư thế của người dùng thông qua camera. Hệ thống sẽ đưa ra cảnh báo bằng giọng nói khi phát hiện tư thế ngồi sai.
+## Tính năng chính
 
-🚀 Tính năng chính
+- **Phát hiện tư thế ngồi**: Sử dụng thư viện MediaPipe để nhận diện các điểm keypoint trên cơ thể và xác định tư thế ngồi.
+- **Cảnh báo tư thế sai**: Hệ thống sẽ cảnh báo bằng âm thanh và hiển thị thông báo khi phát hiện tư thế ngồi không đúng.
+- **Theo dõi thời gian**: Theo dõi thời gian ngồi đúng và sai tư thế, hiển thị thông tin trực tiếp trên giao diện.
+- **Giao diện trực quan**: Giao diện web đơn giản, dễ sử dụng với hiệu ứng hình ảnh và âm thanh thân thiện.
 
-✅ Phát hiện tư thế ngồi thông qua camera.
+## Công nghệ sử dụng
 
-✅ Đánh giá góc nghiêng của cổ và lưng.
+- **Python**: Ngôn ngữ lập trình chính.
+- **Flask**: Framework web để xây dựng giao diện và xử lý yêu cầu HTTP.
+- **MediaPipe**: Thư viện AI của Google để nhận diện các điểm keypoint trên cơ thể.
+- **OpenCV**: Xử lý hình ảnh và video.
+- **gTTS**: Chuyển đổi văn bản thành giọng nói để cảnh báo người dùng.
+- **HTML/CSS/JavaScript**: Xây dựng giao diện người dùng và xử lý tương tác.
 
-✅ Hiển thị thông tin tư thế theo thời gian thực trên giao diện.
+## Cài đặt và chạy ứng dụng
 
-✅ Cảnh báo bằng giọng nói khi phát hiện tư thế ngồi sai.
+### Yêu cầu hệ thống
 
-✅ Giao diện hiện đại, thân thiện với hiệu ứng Glassmorphism.
+- Python 3.x
+- Webcam hoặc thiết bị camera tương thích.
+- Các thư viện Python cần thiết (xem trong `requirements.txt`).
 
-🏗️ Công nghệ sử dụng: Python, Flask, OpenCV, MediaPipe, gTTS (Google Text-to-Speech), HTML/CSS/JavaScript
+### Các bước cài đặt
 
-🔧 Cài đặt và chạy dự án
-1. Clone repo:
-git clone https://github.com/your-repo-name.git
+1. **Clone repository**:
+   ```bash
+   git clone https://github.com/your-repository/smart-posture-detection.git
+   cd smart-posture-detection
+2. **Cài đặt các thư viện cần thiết**:
+    ```bash
+   pip install -r requirements.txt
+3. **Chạy ứng dụng**:
+    ```bash
+    python app.py
+4. **Truy cập ứng dụng**:
+Mở trình duyệt và truy cập địa chỉ http://localhost:5000.
+## Cấu trúc thư mục
 
-3. Cài đặt thư viện cần thiết:
-pip install -r requirements.txt
+- **app.py**: File chính chứa mã nguồn Python để xử lý logic và chạy ứng dụng.
+- **templates/index.html**: File HTML chứa giao diện người dùng.
+- **static/**: Thư mục chứa các tệp tĩnh như CSS, JavaScript, hình ảnh (nếu có).
+- **requirements.txt**: Danh sách các thư viện Python cần thiết.
 
-4. Chạy Flask server:
-python app.py
+## Hướng dẫn sử dụng
 
-5. Truy cập giao diện:
+1. **Khởi động ứng dụng**: Chạy lệnh `python app.py` để khởi động máy chủ.
+2. **Truy cập giao diện**: Mở trình duyệt và truy cập `http://localhost:5000`.
+3. **Theo dõi tư thế**: Hệ thống sẽ hiển thị video trực tiếp từ webcam và cảnh báo khi phát hiện tư thế ngồi sai.
+4. **Tải lại trang**: Nếu cần, nhấn nút "Tải lại" để khởi động lại hệ thống.
+## Giấy phép
 
-Mở trình duyệt và truy cập:
-http://localhost:5000
+Dự án này được phân phối dưới giấy phép MIT. Xem tệp `LICENSE` để biết thêm chi tiết.
 
-🖥️ Hướng dẫn sử dụng
+## Liên hệ
 
-Kết nối camera hoặc sử dụng ứng dụng DroidCam để truyền hình ảnh từ điện thoại.
+Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, vui lòng liên hệ qua email: **dnagbinh12@gmai.com**.
 
-Mở giao diện hệ thống trên trình duyệt.
+## Tác giả
 
-Theo dõi thông tin về tư thế ngồi trên giao diện.
+**Nhóm 5 - CNTT 16_04 - Đại học Đại Nam**:
 
-Khi tư thế sai, hệ thống sẽ hiển thị cảnh báo và phát âm thanh.
+- Tạ Việt Anh
+- Đặng Thanh Bình
+- Vũ Hải Đức
+- Nguyễn Tuấn Anh
 
-🏆 Đánh giá tư thế
+## Lời cảm ơn
 
-![image](https://github.com/user-attachments/assets/bc22d6d1-0385-489b-9b07-a2831243c5cb)
-
-
-⚠️ Cảnh báo
-
-Hệ thống sẽ phát âm thanh cảnh báo nếu bạn duy trì tư thế sai quá 6 giây.
-
-Khi có lỗi nhận diện, thông báo sẽ hiển thị trên giao diện.
+Cảm ơn tất cả các thành viên trong nhóm đã đóng góp vào dự án này. Đặc biệt cảm ơn các thư viện mã nguồn mở đã giúp chúng tôi xây dựng hệ thống này một cách dễ dàng hơn.
