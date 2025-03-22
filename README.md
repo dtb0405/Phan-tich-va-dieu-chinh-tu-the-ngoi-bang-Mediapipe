@@ -1,86 +1,112 @@
-# Hệ thống phát hiện tư thế ngồi thông minh
+# 🎓 Phân tích và điều chỉnh tư thế ngồi bằng Mediapipe ứng dụng AIoT
 
-Hệ thống phát hiện tư thế ngồi thông minh là một ứng dụng sử dụng công nghệ Computer Vision và Machine Learning để theo dõi và cảnh báo người dùng về tư thế ngồi không đúng. Hệ thống này giúp người dùng cải thiện tư thế ngồi, tránh các vấn đề sức khỏe liên quan đến việc ngồi sai tư thế trong thời gian dài.
+<div align="center">
 
-## Tính năng chính
+<p align="center" dir="auto">
+  <a target="_blank" rel="noopener noreferrer" href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Logo_DAI_NAM.png/1200px-Logo_DAI_NAM.png" alt="DaiNam University Logo" width="200" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href=""><img src="https://raw.githubusercontent.com/drkhanusa/DNU_PlagiarismChecker/main/docs/images/AIoTLab_logo.png" alt="AIoTLab Logo" width="170" style="max-width: 100%;"></a>
+</p>
+<p dir="auto"><a href="https://fit.dainam.edu.vn" rel="nofollow"><img src="https://camo.githubusercontent.com/14375b31490acab17dd414aef749f3c109a82abaeae50592667c9955b79ce09a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d616465253230627925323041496f544c61622d626c75653f7374796c653d666f722d7468652d6261646765" alt="Made by AIoTLab" data-canonical-src="https://img.shields.io/badge/Made%20by%20AIoTLab-blue?style=for-the-badge" style="max-width: 100%;"></a>
+<a href="https://fit.dainam.edu.vn" rel="nofollow"><img src="https://camo.githubusercontent.com/f33b9e36f6d7e3878c31898033ff8514d824d4f51d8cab187bf3eddc84e2a99e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f466163756c74792532306f66253230496e666f726d6174696f6e253230546563686e6f6c6f67792d677265656e3f7374796c653d666f722d7468652d6261646765" alt="Faculty of IT" data-canonical-src="https://img.shields.io/badge/Faculty%20of%20Information%20Technology-green?style=for-the-badge" style="max-width: 100%;"></a>
+<a href="https://dainam.edu.vn" rel="nofollow"><img src="https://camo.githubusercontent.com/b503f479f429296dbff6eb7e1e583a962657044af1feb98e6dfc4a68a106a49e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4461694e616d253230556e69766572736974792d7265643f7374796c653d666f722d7468652d6261646765" alt="DaiNam University" data-canonical-src="https://img.shields.io/badge/DaiNam%20University-red?style=for-the-badge" style="max-width: 100%;"></a></p>
+</div>
 
-- **Phát hiện tư thế ngồi**: Sử dụng thư viện MediaPipe để nhận diện các điểm keypoint trên cơ thể và xác định tư thế ngồi.
-- **Cảnh báo tư thế sai**: Hệ thống sẽ cảnh báo bằng âm thanh và hiển thị thông báo khi phát hiện tư thế ngồi không đúng.
-- **Theo dõi thời gian**: Theo dõi thời gian ngồi đúng và sai tư thế, hiển thị thông tin trực tiếp trên giao diện.
-- **Giao diện trực quan**: Giao diện web đơn giản, dễ sử dụng với hiệu ứng hình ảnh và âm thanh thân thiện.
+<p align="center">
+  <a href="#-architecture">Kiến trúc hệ thống</a> •
+  <a href="#-key-features">Tính năng</a> •
+  <a href="#-tech-stack">Công cụ</a> •
+  <a href="#-installation">Cài đặt</a> •
+  <a href="#-getting-started">Triển khai</a> •
+  <a href="#-documentation">Video hướng dẫn chi tiết</a>
+</p>
 
-## Công nghệ sử dụng
+## 🏗️ Kiến trúc hệ thống
 
-- **Python**: Ngôn ngữ lập trình chính.
-- **Flask**: Framework web để xây dựng giao diện và xử lý yêu cầu HTTP.
-- **MediaPipe**: Thư viện AI của Google để nhận diện các điểm keypoint trên cơ thể.
-- **OpenCV**: Xử lý hình ảnh và video.
-- **gTTS**: Chuyển đổi văn bản thành giọng nói để cảnh báo người dùng.
-- **HTML/CSS/JavaScript**: Xây dựng giao diện người dùng và xử lý tương tác.
+<p align="center">
+  <img src="Báo cáo/images/system_architecture.png" alt="System Architecture" width="800"/>
+</p>
 
-## Video demo
+Hệ thống sử dụng kiến trúc ba lớp:
 
-Dưới đây là video demo về cách hệ thống hoạt động:
+1. **📷 Camera Layer**: Thu thập dữ liệu hình ảnh từ camera theo thời gian thực.
+2. **🧠 AI Processing Layer**: Phân tích tư thế ngồi bằng Mediapipe Pose và OpenCV.
+3. **📊 Feedback Layer**: Hiển thị kết quả và cảnh báo thông qua giao diện web.
 
-[![Xem video demo trên YouTube](https://i9.ytimg.com/vi_webp/PpePOWZTrzA/mq2.webp?sqp=CIjv774G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDggZShlMA8=&rs=AOn4CLDcSgrikfD21yGEIPjOkRpwixEhhQ)](https://youtu.be/PpePOWZTrzA)
+## ✨ Các tính năng chính
 
-## Cài đặt và chạy ứng dụng
+### 🧠 Công nghệ AI tiên tiến
+- **Mediapipe Pose**: Phát hiện 33 điểm đặc trưng trên cơ thể với độ chính xác cao.
+- **Tính toán góc nghiêng**: Xác định tư thế ngồi dựa trên góc nghiêng của cổ và lưng.
+- **Cảnh báo thời gian thực**: Phản hồi ngay lập tức khi phát hiện tư thế sai.
 
-### Yêu cầu hệ thống
+### ⚡ Hiệu suất cao
+- **Xử lý 30 FPS**: Đảm bảo phản hồi nhanh chóng và mượt mà.
+- **Tối ưu hóa thuật toán**: Sử dụng lọc Kalman để ổn định dữ liệu và giảm nhiễu.
 
-- Python 3.x
-- Webcam hoặc thiết bị camera tương thích.
-- Các thư viện Python cần thiết (xem trong `requirements.txt`).
+### 📊 Phân tích toàn diện
+- **Hiển thị trực quan**: Giao diện web hiển thị góc nghiêng và trạng thái tư thế.
+- **Lưu trữ lịch sử**: Theo dõi thời gian ngồi đúng và sai tư thế.
 
-### Các bước cài đặt
+## 🔧 Công cụ
 
-1. **Clone repository**:
+<div align="center">
+
+### Công nghệ cốt lõi
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![Mediapipe](https://img.shields.io/badge/Mediapipe-FF6F00?style=for-the-badge&logo=mediapipe&logoColor=white)](https://mediapipe.dev/)
+
+</div>
+
+## 📥 Cài đặt
+
+### 🛠️ Yêu cầu tiên quyết
+
+- 🐍 **Python** `3.8+` - Ngôn ngữ lập trình chính.
+- 📦 **OpenCV** - Xử lý hình ảnh và video.
+- 🧠 **Mediapipe** - Phát hiện các điểm đặc trưng trên cơ thể.
+- 🌐 **Flask** - Xây dựng giao diện web và xử lý yêu cầu HTTP.
+
+### ⚙️ Thiết lập dự án
+
+1. 📦 **Sao chép kho lưu trữ**
    ```bash
-   git clone https://github.com/your-repository/smart-posture-detection.git
-   cd smart-posture-detection
-2. **Cài đặt các thư viện cần thiết**:
-    ```bash
+   git clone https://github.com/dtb0405/Phan-tich-va-dieu-chinh-tu-the-ngoi-bang-Mediapipe.git
+   cd Phan-tich-va-dieu-chinh-tu-the-ngoi-bang-Mediapipe
+2. 📚 **Cài đặt thư viện cần thiết**
+   ```bash
    pip install -r requirements.txt
-3. **Chạy ứng dụng**:
-    ```bash
-    python app.py
-4. **Truy cập ứng dụng**:
-Mở trình duyệt và truy cập địa chỉ http://localhost:5000.
-## Cấu trúc thư mục
+3. ⚡ **Chạy ứng dụng**
+   ```bash
+   python app.py
+4. 🌐 **Truy cập ứng dụng**
 
-- **app.py**: File chính chứa mã nguồn Python để xử lý logic và chạy ứng dụng.
-- **templates/index.html**: File HTML chứa giao diện người dùng.
-- **static/**: Thư mục chứa các tệp tĩnh như CSS, JavaScript, hình ảnh (nếu có).
-- **requirements.txt**: Danh sách các thư viện Python cần thiết.
+Mở trình duyệt và truy cập http://localhost:5000.
+### 🚀 Triển khai
+**⚡ Khởi động nhanh**
+1. Khởi động hệ thống bằng lệnh:
+   ```bash
+   python app.py
+2. Mở trình duyệt và truy cập http://localhost:5000.
+3. Hệ thống sẽ hiển thị video trực tiếp từ camera và cảnh báo khi phát hiện tư thế sai.
 
-## Hướng dẫn sử dụng
+**📝 License**
 
-1. **Khởi động ứng dụng**: Chạy lệnh `python app.py` để khởi động máy chủ.
-2. **Truy cập giao diện**: Mở trình duyệt và truy cập `http://localhost:5000`.
-3. **Theo dõi tư thế**: Hệ thống sẽ hiển thị video trực tiếp từ webcam và cảnh báo khi phát hiện tư thế ngồi sai.
-4. **Tải lại trang**: Nếu cần, nhấn nút "Tải lại" để khởi động lại hệ thống.
-## Giấy phép
+© 2025 Nhóm 5, CNTT 16-04, AIoTLab, Khoa Công nghệ Thông tin, Trường Đại học Đại Nam. 
 
-Dự án này được phân phối dưới giấy phép MIT. Xem tệp `LICENSE` để biết thêm chi tiết.
+## 🎥 Video Hướng Dẫn Chi Tiết
 
-## Liên hệ
+Để hiểu rõ hơn về cách cài đặt và sử dụng hệ thống, bạn có thể xem video hướng dẫn chi tiết dưới đây:
 
-Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, vui lòng liên hệ qua email: **dnagbinh12@gmai.com**.
+[![Video Hướng Dẫn](https://img.youtube.com/vi/ms6KwI8QnPs/0.jpg)](https://youtu.be/ms6KwI8QnPs)
 
-## Tác giả
+**Nhấn vào hình ảnh để xem video trên YouTube.**
 
-**Nhóm 5 - CNTT 16_04 - Đại học Đại Nam**:
+<div align="center">
 
-- Tạ Việt Anh
-- Đặng Thanh Bình
-- Vũ Hải Đức
-- Nguyễn Tuấn Anh
+Thực hiện bởi Nhóm 5 - CNTT1604, AIoTLab, Đại học Đại Nam
 
-## Lời cảm ơn
+Website • GitHub • Contact Us
 
-Cảm ơn tất cả các thành viên trong nhóm đã đóng góp vào dự án này. Đặc biệt chúng tôi xin gửi lời cảm ơn chân thành đến:
-
-- **Thầy Lê Trung Hiếu** - Người đã tận tình hướng dẫn, chia sẻ kiến thức và kinh nghiệm quý báu, giúp chúng tôi vượt qua những khó khăn trong quá trình thực hiện dự án.
-- **Thầy Nguyễn Văn Nhân** - Người đã truyền cảm hứng, động viên và hỗ trợ chúng tôi trong việc phát triển và hoàn thiện hệ thống.
-
-Nhờ sự giúp đỡ và định hướng của hai thầy, chúng tôi đã có thể hoàn thành dự án một cách suôn sẻ và hiệu quả. Chúng tôi luôn trân trọng những đóng góp và sự hỗ trợ quý báu từ các thầy.
+</div>
